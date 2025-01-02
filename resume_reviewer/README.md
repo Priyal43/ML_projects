@@ -43,3 +43,22 @@ Follow the steps below to set up the project on your local machine:
 1. Launch the application and upload your resume in PDF format.
 2. Optionally, paste a job description to compare.
 3. Submit the form to receive detailed feedback.
+
+## File Structure
+ 
+```
+resume-reviewer/  
+├── app/  
+│   ├── __init__.py         
+│   ├── routes.py           
+│   ├── utils.py            
+│   ├── templates/  
+│   │   ├── index.html      
+│   │   ├── results.html    
+│   └── static/  
+│       └── style.css       
+├── skills_list.json        
+├── requirements.txt       
+├── Procfile                
+└── README.md   
+```         
