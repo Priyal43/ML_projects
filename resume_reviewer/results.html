@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Feedback</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Your Resume Feedback</h1>
+        <div class="feedback-box">
+            {% if feedback %}
+                <pre>{{ feedback }}</pre>
+            {% else %}
+                <p>No feedback generated. Please try again.</p>
+            {% endif %}
+        </div>
+        <a href="/" class="btn">Upload Another Resume</a>
+    </div>
+</body>
+</html>

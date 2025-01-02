@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Reviewer</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI-Powered Resume Reviewer</h1>
+        <p>Upload your resume and get actionable feedback to improve it for your next job application.</p>
+        
+        <!-- Flash Messages -->
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="flash-messages">
+                {% for message in messages %}
+                    <p>{{ message }}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
+        {% endwith %}
+
+        <form action="/upload" method="post" enctype="multipart/form-data" class="form-box">
+            <label for="resume">Upload Your Resume (PDF only):</label>
+            <input type="file" id="resume" name="file" accept="application/pdf" required>
+            
+            <label for="job_description">Paste Job Description (Optional):</label>
+            <textarea id="job_description" name="job_description" placeholder="Paste the job description here..."></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
